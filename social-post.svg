@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-labelledby="social-title social-desc">
+  <title id="social-title">Template Oficial Teloísmo — Axiomas &amp; Citações (1080x1080)</title>
+  <desc id="social-desc">Template brutalista 1080x1080 em preto profundo e cinza-chumbo com malha geométrica de Fibonacci (55x55px), marcadores táticos, citação centralizada em tipografia de alto impacto e o Martelo Teloísta Áureo no rodapé.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&amp;family=JetBrains+Mono:wght@500;700&amp;family=Space+Grotesk:wght@700&amp;display=swap');
+
+      :root {
+        --void: #09090B;
+        --steel-dark: #27272A;
+        --steel-main: #52525B;
+        --steel-light: #A1A1AA;
+        --white-cold: #F4F4F5;
+        --crimson: #991B1B;
+      }
+
+      .bg-void { fill: var(--void); }
+      .bg-panel { fill: #0E0E12; stroke: var(--steel-dark); stroke-width: 2; }
+      .frame-border { fill: none; stroke: var(--steel-main); stroke-width: 2; }
+      .grid-line { stroke: var(--steel-dark); stroke-width: 1; opacity: 0.55; }
+      .axis-cross { stroke: var(--steel-main); stroke-width: 1.5; opacity: 0.35; }
+      .crimson-bar { fill: var(--crimson); }
+      .crimson-stroke { stroke: var(--crimson); stroke-width: 3; fill: none; }
+
+      .txt-mono-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 18px;
+        font-weight: 700;
+        fill: var(--steel-main);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      .txt-mono-crimson {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 21px;
+        font-weight: 700;
+        fill: var(--crimson);
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+
+      .txt-quote-main {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 55px;
+        font-weight: 700;
+        fill: var(--white-cold);
+        letter-spacing: -1.5px;
+        text-transform: uppercase;
+      }
+
+      .txt-quote-muted {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 55px;
+        font-weight: 700;
+        fill: var(--steel-main);
+        letter-spacing: -1.5px;
+        text-transform: uppercase;
+      }
+
+      .txt-quote-sub {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 21px;
+        font-weight: 500;
+        fill: var(--steel-light);
+        letter-spacing: 1px;
+      }
+    </style>
+
+    <!-- PADRÃO DE MALHA GEOMÉTRICA SUTIL DE FIBONACCI (55x55px - F10) -->
+    <pattern id="tactical-grid" width="55" height="55" patternUnits="userSpaceOnUse">
+      <path d="M 55 0 L 0 0 0 55" fill="none" class="grid-line" />
+    </pattern>
+
+    <!-- SUB-MALHA DE PRECISÃO (275x275px = 5 x 55px) -->
+    <pattern id="major-grid" width="275" height="275" patternUnits="userSpaceOnUse">
+      <rect width="275" height="275" fill="url(#tactical-grid)" />
+      <path d="M 275 0 L 0 0 0 275" fill="none" stroke="#3F3F46" stroke-width="1.5" opacity="0.6" />
+    </pattern>
+  </defs>
+
+  <!-- 1. FUNDO VOID E GRIDS GEOMÉTRICOS -->
+  <rect width="1080" height="1080" class="bg-void" />
+  <rect x="55" y="55" width="970" height="970" fill="url(#major-grid)" />
+
+  <!-- LINHAS DIAGONAIS DE TENSÃO ESTRUTURAL -->
+  <line x1="55" y1="55" x2="1025" y2="1025" class="axis-cross" stroke-dasharray="8 8" />
+  <line x1="1025" y1="55" x2="55" y2="1025" class="axis-cross" stroke-dasharray="8 8" />
+
+  <!-- MOLDURA EXTERNA BRUTALISTA -->
+  <rect x="55" y="55" width="970" height="970" class="frame-border" />
+
+  <!-- MARCADORES DE CANTO (55px - F10) -->
+  <polyline points="55,110 55,55 110,55" class="crimson-stroke" />
+  <polyline points="970,55 1025,55 1025,110" stroke="#F4F4F5" stroke-width="3" fill="none" />
+  <polyline points="55,970 55,1025 110,1025" stroke="#F4F4F5" stroke-width="3" fill="none" />
+  <polyline points="970,1025 1025,1025 1025,970" class="crimson-stroke" />
+
+  <!-- 2. CABEÇALHO DE TELEMETRIA DO CARD -->
+  <g transform="translate(99, 115)">
+    <text x="0" y="0" class="txt-mono-tag">DOCTRINE // TELOÍSMO</text>
+    <text x="882" y="0" text-anchor="end" class="txt-mono-tag">MANDAMENTO #[001]</text>
+    <line x1="0" y1="21" x2="882" y2="21" stroke="#27272A" stroke-width="2" />
+    <rect x="0" y="19" width="144" height="5" class="crimson-bar" />
+  </g>
+
+  <!-- 3. ÁREA CENTRALIZADA PARA CITAÇÃO / AXIOMA -->
+  <g transform="translate(120, 233)">
+    <rect x="13" y="13" width="840" height="514" fill="#27272A" />
+    <rect x="0" y="0" width="840" height="514" class="bg-panel" />
+    <rect x="0" y="0" width="8" height="514" class="crimson-bar" />
+
+    <text x="420" y="76" text-anchor="middle" class="txt-mono-crimson">
+      [ IMPERATIVO TELOÍSTA ]
+    </text>
+
+    <!-- TEXTO EDITÁVEL DA CITAÇÃO / AXIOMA -->
+    <text x="420" y="175" text-anchor="middle" class="txt-quote-main">
+      AME A TODOS,
+    </text>
+    <text x="420" y="245" text-anchor="middle" class="txt-quote-muted">
+      MAS A SI MESMO
+    </text>
+    <text x="420" y="315" text-anchor="middle" class="txt-quote-main">
+      PRIMEIRO.
+    </text>
+
+    <line x1="276" y1="395" x2="564" y2="395" stroke="#52525B" stroke-width="2" />
+    <text x="420" y="445" text-anchor="middle" class="txt-quote-sub">
+      — OS 10 MANDAMENTOS DO TELOÍSMO, I
+    </text>
+  </g>
+
+  <!-- 4. RODAPÉ COM O NOVO LOGO OFICIAL (MARTELO TELOÍSTA FIBONACCI) -->
+  <g transform="translate(99, 825)">
+    <line x1="0" y1="0" x2="882" y2="0" stroke="#27272A" stroke-width="2" />
+
+    <text x="0" y="84" class="txt-mono-tag">PRAGMATISMO // RAZÃO</text>
+    <text x="0" y="114" class="txt-mono-tag" fill="#3F3F46">VONTADE DE POTÊNCIA</text>
+
+    <!-- SÍMBOLO OFICIAL CENTRALIZADO NO RODAPÉ: MARTELO FIBONACCI -->
+    <g transform="translate(366, 21) scale(0.15)">
+      <rect width="1000" height="1000" fill="#09090B" stroke="#52525B" stroke-width="14"/>
+      <g transform="translate(500, 445)">
+        <path d="M 301.95 91.50 A 315.5 315.5 0 1 1 290.15 -124.50" fill="none" stroke="#27272A" stroke-width="55" stroke-linecap="butt"/>
+        <rect x="-65.5" y="278" width="131" height="76" fill="#09090B"/>
+        <g fill="#52525B">
+          <polygon points="-64,-123 64,-123 72,-89 -72,-89"/>
+          <rect x="-72" y="-89" width="144" height="144"/>
+          <polygon points="-72,55 72,55 62,76 -62,76"/>
+          <rect x="-44.5" y="76" width="89" height="21"/>
+          <polygon points="-65.5,97 65.5,97 49.5,131 -49.5,131"/>
+          <rect x="-44.5" y="131" width="89" height="280"/>
+          <polygon points="-44.5,411 44.5,411 55,432 72,432 44.5,487 -44.5,487 -72,432 -55,432"/>
+        </g>
+        <polygon fill="#52525B" points="-72,-89 -199,-89 -233,-110 -233,76 -199,55 -72,55"/>
+        <polygon fill="#991B1B" points="72,-89 377,-17 72,55"/>
+        <g stroke="#09090B" stroke-width="21" stroke-linecap="butt">
+          <line x1="-72" y1="-94" x2="-72" y2="60"/>
+          <line x1="72" y1="-94" x2="72" y2="60"/>
+          <line x1="-68" y1="92" x2="68" y2="92"/>
+          <line x1="-60" y1="411" x2="60" y2="411"/>
+        </g>
+      </g>
+    </g>
+
+    <text x="882" y="84" text-anchor="end" class="txt-mono-tag" fill="#F4F4F5">TELOÍSMO // PHI 1.618</text>
+    <text x="882" y="114" text-anchor="end" class="txt-mono-crimson">CORTE // #991B1B</text>
+  </g>
+</svg>

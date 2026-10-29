@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1080, height=1350, initial-scale=1.0" />
+  <title>Os 10 Mandamentos do Teloísmo — Post WhatsApp (1080x1350)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=JetBrains+Mono:wght@700;800&family=Space+Grotesk:wght@700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1350px;
+      background-color: #09090B;
+      color: #FFFFFF;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .poster-canvas {
+      width: 1080px;
+      height: 1350px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #09090B;
+      background-image:
+        linear-gradient(to right, rgba(63, 63, 70, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(63, 63, 70, 0.45) 1px, transparent 1px);
+      background-size: 54px 54px;
+    }
+
+    /* Moldura Principal de Alto Impacto */
+    .outer-frame {
+      width: 100%;
+      height: 100%;
+      border: 3px solid #71717A;
+      background-color: #0B0B0E;
+      padding: 26px 28px 22px 28px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 10px 10px 0px #18181B;
+    }
+
+    /* Cantoneiras Vermelho Vivo */
+    .corner-tl, .corner-br {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+    }
+    .corner-tl {
+      top: -3px;
+      left: -3px;
+      border-top: 6px solid #EF4444;
+      border-left: 6px solid #EF4444;
+    }
+    .corner-br {
+      bottom: -3px;
+      right: -3px;
+      border-bottom: 6px solid #EF4444;
+      border-right: 6px solid #EF4444;
+    }
+
+    /* CABEÇALHO DENSO E FORTE */
+    .poster-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 18px;
+      border-bottom: 3px solid #3F3F46;
+      position: relative;
+    }
+
+    .poster-header::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 240px;
+      height: 5px;
+      background-color: #EF4444;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .header-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 800;
+      color: #EF4444;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .header-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .header-title span {
+      color: #A1A1AA;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    .header-emblem {
+      width: 102px;
+      height: 102px;
+      flex-shrink: 0;
+      border: 3px solid #71717A;
+      background-color: #09090B;
+      box-shadow: 6px 6px 0px #18181B;
+      padding: 4px;
+    }
+
+    /* GRADE DOS MANDAMENTOS: 2 COLUNAS PREENCHENDO TODO O ESPAÇO */
+    .commandments-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 18px 0;
+      flex: 1;
+    }
+
+    .cmd-card {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      align-items: center;
+      background-color: #141418;
+      border: 2px solid #2E2E34;
+      border-left: 6px solid #52525B;
+      padding: 16px 20px;
+      box-shadow: 5px 5px 0px #000000;
+      gap: 16px;
+    }
+
+    .cmd-card.crimson-edge {
+      border-left-color: #EF4444;
+      background-color: #161215;
+    }
+
+    /* NÚMERO ROMANO EM TEXTO PURO DE ALTO CONTRASTE */
+    .cmd-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      font-weight: 800;
+      color: #EF4444;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .cmd-card:not(.crimson-edge) .cmd-num {
+      color: #A1A1AA;
+    }
+
+    /* CORPO DO TEXTO EM ALTO CONTRASTE */
+    .cmd-body {
+      font-size: 18px;
+      line-height: 1.35;
+      color: #E4E4E7;
+      font-weight: 600;
+    }
+
+    .cmd-body strong {
+      color: #FFFFFF;
+      font-weight: 800;
+    }
+
+    /* RODAPÉ TÁTICO */
+    .poster-footer {
+      padding-top: 14px;
+      border-top: 3px solid #3F3F46;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      color: #A1A1AA;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .footer-pillars {
+      color: #FFFFFF;
+      font-weight: 800;
+    }
+
+    .footer-pillars span {
+      color: #EF4444;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="poster-canvas">
+    <div class="outer-frame">
+      <div class="corner-tl"></div>
+      <div class="corner-br"></div>
+
+      <!-- CABEÇALHO -->
+      <header class="poster-header">
+        <div class="header-left">
+          <div class="header-tag">// DOUTRINA FILOSÓFICA · CÓDIGO OPERACIONAL</div>
+          <h1 class="header-title">
+            OS 10 MANDAMENTOS <span>DO TELOÍSMO.</span>
+          </h1>
+        </div>
+
+        <!-- EMBLEMA FIBONACCI EM ALTO CONTRASTE -->
+        <div class="header-emblem">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+            <rect width="1000" height="1000" fill="#09090B"/>
+            <g transform="translate(500, 445)">
+              <path d="M 301.95 91.50 A 315.5 315.5 0 1 1 290.15 -124.50" fill="none" stroke="#52525B" stroke-width="55" stroke-linecap="butt"/>
+              <rect x="-65.5" y="278" width="131" height="76" fill="#09090B"/>
+              <g fill="#D4D4D8">
+                <polygon points="-64,-123 64,-123 72,-89 -72,-89"/>
+                <rect x="-72" y="-89" width="144" height="144"/>
+                <polygon points="-72,55 72,55 62,76 -62,76"/>
+                <rect x="-44.5" y="76" width="89" height="21"/>
+                <polygon points="-65.5,97 65.5,97 49.5,131 -49.5,131"/>
+                <rect x="-44.5" y="131" width="89" height="280"/>
+                <polygon points="-44.5,411 44.5,411 55,432 72,432 44.5,487 -44.5,487 -72,432 -55,432"/>
+              </g>
+              <polygon fill="#D4D4D8" points="-72,-89 -199,-89 -233,-110 -233,76 -199,55 -72,55"/>
+              <polygon fill="#EF4444" points="72,-89 377,-17 72,55"/>
+              <g stroke="#09090B" stroke-width="21" stroke-linecap="butt">
+                <line x1="-72" y1="-94" x2="-72" y2="60"/>
+                <line x1="72" y1="-94" x2="72" y2="60"/>
+                <line x1="-68" y1="92" x2="68" y2="92"/>
+                <line x1="-60" y1="411" x2="60" y2="411"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </header>
+
+      <!-- OS 10 MANDAMENTOS (2 COLUNAS) -->
+      <main class="commandments-grid">
+        <!-- MANDAMENTO I -->
+        <div class="cmd-card crimson-edge">
+          <div class="cmd-num">I.</div>
+          <div class="cmd-body"><strong>Ame a todos,</strong> mas a si mesmo primeiro.</div>
+        </div>
+
+        <!-- MANDAMENTO II -->
+        <div class="cmd-card">
+          <div class="cmd-num">II.</div>
+          <div class="cmd-body"><strong>Honre a qualquer um,</strong> desde que o mérito seja comprovado material e intelectualmente.</div>
+        </div>
+
+        <!-- MANDAMENTO III -->
+        <div class="cmd-card">
+          <div class="cmd-num">III.</div>
+          <div class="cmd-body"><strong>Evite o roubo, o assassinato</strong> e a irresponsabilidade material ou biológica no mundo.</div>
+        </div>
+
+        <!-- MANDAMENTO IV -->
+        <div class="cmd-card">
+          <div class="cmd-num">IV.</div>
+          <div class="cmd-body"><strong>Sinta o ódio e as emoções,</strong> mas submeta a utilidade desses impulsos à lógica antes da ação.</div>
+        </div>
+
+        <!-- MANDAMENTO V -->
+        <div class="cmd-card">
+          <div class="cmd-num">V.</div>
+          <div class="cmd-body"><strong>Acumule recursos sem culpa</strong> no sistema vigente, mas opere para superar este modelo de escassez.</div>
+        </div>
+
+        <!-- MANDAMENTO VI -->
+        <div class="cmd-card crimson-edge">
+          <div class="cmd-num">VI.</div>
+          <div class="cmd-body"><strong>Rejeite a violência gratuita.</strong> Perante ameaça à sua vida ou integridade, a retaliação defensiva é um dever.</div>
+        </div>
+
+        <!-- MANDAMENTO VII -->
+        <div class="cmd-card crimson-edge">
+          <div class="cmd-num">VII.</div>
+          <div class="cmd-body"><strong>Abrace os instintos como força motriz;</strong> sacie-os com escrutínio, pois dar sentido é superior a ser escravo deles.</div>
+        </div>
+
+        <!-- MANDAMENTO VIII -->
+        <div class="cmd-card">
+          <div class="cmd-num">VIII.</div>
+          <div class="cmd-body"><strong>Respeite o direito alheio à fé,</strong> mas exija a separação absoluta entre crença pessoal e fato empírico.</div>
+        </div>
+
+        <!-- MANDAMENTO IX -->
+        <div class="cmd-card">
+          <div class="cmd-num">IX.</div>
+          <div class="cmd-body"><strong>Repudie o anti-intelectualismo.</strong> Busque a superação de si mesmo, sem nivelar o conhecimento à mediocridade.</div>
+        </div>
+
+        <!-- MANDAMENTO X -->
+        <div class="cmd-card crimson-edge">
+          <div class="cmd-num">X.</div>
+          <div class="cmd-body"><strong>Aceite a própria escuridão.</strong> Utilize a totalidade de sua natureza humana como ferramenta, sem ser controlado por ela.</div>
+        </div>
+      </main>
+
+      <!-- RODAPÉ -->
+      <footer class="poster-footer">
+        <div class="footer-pillars">
+          PRAGMATISMO <span>//</span> RACIONALIDADE IMPLACÁVEL <span>//</span> SUPERAÇÃO MATERIAL
+        </div>
+        <div>TELOÍSMO · RITO ÁUREO [φ 1.618]</div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

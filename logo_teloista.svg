@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- O MARTELO TELOÍSTA — LOGO OFICIAL (PROPORÇÃO ÁUREA / FIBONACCI) -->
+  <rect id="Fundo_Void" width="1000" height="1000" fill="#09090B"/>
+
+  <g id="Eixos_Guias">
+    <line x1="500" y1="0" x2="500" y2="1000" stroke="#18181B" stroke-width="2"/>
+    <line x1="0" y1="445" x2="1000" y2="445" stroke="#18181B" stroke-width="2"/>
+  </g>
+
+  <g id="Martelo_Fibonacci_Aureo" transform="translate(500, 445)">
+    <path
+      id="Anel_Circunferencia"
+      d="M 301.95 91.50 A 315.5 315.5 0 1 1 290.15 -124.50"
+      fill="none"
+      stroke="#27272A"
+      stroke-width="55"
+      stroke-linecap="butt"
+    />
+    <rect id="Knockout_Anel_Cabo" x="-65.5" y="278" width="131" height="76" fill="#09090B"/>
+
+    <g id="Coluna_e_Cabo" fill="#52525B">
+      <polygon id="Topo_Olhal" points="-64,-123 64,-123 72,-89 -72,-89"/>
+      <rect id="Nucleo_Olhal" x="-72" y="-89" width="144" height="144"/>
+      <polygon id="Base_Olhal" points="-72,55 72,55 62,76 -62,76"/>
+      <rect id="Pescoco_Cabo" x="-44.5" y="76" width="89" height="21"/>
+      <polygon id="Colar_Cabo" points="-65.5,97 65.5,97 49.5,131 -49.5,131"/>
+      <rect id="Haste_Cabo" x="-44.5" y="131" width="89" height="280"/>
+      <polygon id="Pomo_Cabo" points="-44.5,411 44.5,411 55,432 72,432 44.5,487 -44.5,487 -72,432 -55,432"/>
+    </g>
+
+    <polygon id="Cabeca_Cega_Esquerda" fill="#52525B" points="-72,-89 -199,-89 -233,-110 -233,76 -199,55 -72,55"/>
+    <polygon id="Cabeca_Afiada_Direita" fill="#991B1B" points="72,-89 377,-17 72,55"/>
+
+    <g id="Cortes_Espaco_Negativo" stroke="#09090B" stroke-width="21" stroke-linecap="butt">
+      <line id="Corte_Vertical_Esq" x1="-72" y1="-94" x2="-72" y2="60"/>
+      <line id="Corte_Vertical_Dir" x1="72" y1="-94" x2="72" y2="60"/>
+      <line id="Corte_Horizontal_Colar" x1="-68" y1="92" x2="68" y2="92"/>
+      <line id="Corte_Horizontal_Pomo" x1="-60" y1="411" x2="60" y2="411"/>
+    </g>
+  </g>
+</svg>

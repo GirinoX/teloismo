@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- 1. FUNDO VOID (#09090B) -->
+  <rect id="Fundo_Void" width="1000" height="1000" fill="#09090B"/>
+
+  <!-- 2. EIXOS CARTESIANOS E GUIAS ÓTICAS SUTIS -->
+  <g id="Guias_Taticas" opacity="0.6">
+    <line x1="500" y1="0" x2="500" y2="1000" stroke="#18181B" stroke-width="2"/>
+    <line x1="0" y1="500" x2="1000" y2="500" stroke="#18181B" stroke-width="2"/>
+    <!-- Linha de Horizonte da Cabeça do Martelo (Eixo Y = 370 / -130 do centro) -->
+    <line x1="0" y1="370" x2="1000" y2="370" stroke="#18181B" stroke-width="1" stroke-dasharray="10 10"/>
+  </g>
+
+  <!-- 3. SISTEMA CENTRAL (ORIGEM 500, 500) -->
+  <g id="Simbolo_Teloismo" transform="translate(500, 500)">
+
+    <!-- =================================================================
+         CAMADA A: O ANEL CORTADO (CAOS / DOGMA) — EM SEGUNDO PLANO (#27272A)
+         Raio = 320 | Espessura = 68 (Borda interna: 286, Borda externa: 354)
+         Abertura de 64 graus na direita-superior (alinhada ao eixo Y = -130)
+         ================================================================= -->
+    <g id="Anel_Circunferencia">
+      <path
+        id="Arco_Principal"
+        d="M 316.89 44.53 A 320 320 0 1 1 178.94 -265.29"
+        fill="none"
+        stroke="#27272A"
+        stroke-width="68"
+        stroke-linecap="butt"
+      />
+      <!-- Aresta Metálica Interna Sutil para Definição Ótica -->
+      <path
+        id="Arco_Borda_Interna"
+        d="M 283.22 39.80 A 286 286 0 1 1 159.93 -237.10"
+        fill="none"
+        stroke="#3F3F46"
+        stroke-width="2"
+        stroke-linecap="butt"
+      />
+    </g>
+
+    <!-- =================================================================
+         CAMADA B: O CABO DO MARTELO (PILAR ESTRUTURAL QUE ROMPE O ANEL)
+         Começa no topo da cabeça (Y = -232) e atravessa a circunferência
+         inferior (borda externa do anel está em Y = +354; o cabo desce até Y = +448)
+         ================================================================= -->
+    <g id="Cabo_Martelo">
+      <!-- Recorte de Espaço Negativo (Knockout) onde o cabo rompe o anel inferior -->
+      <rect id="Knockout_Anel_Inferior" x="-52" y="268" width="104" height="104" fill="#09090B"/>
+
+      <!-- Espiga Superior (Cravada acima da cabeça do martelo — assinatura visual de martelo) -->
+      <polygon id="Espiga_Topo" points="-32,-232 32,-232 38,-196 -38,-196" fill="#52525B"/>
+
+      <!-- Haste / Pilar Principal -->
+      <rect id="Haste_Vertical" x="-36" y="-196" width="72" height="596" fill="#52525B"/>
+
+      <!-- Pomo / Empunhadura Pesada Fora da Circunferência (Y = 390 até 448) -->
+      <polygon id="Pomo_Base" points="-36,390 36,390 54,432 42,448 -42,448 -54,432" fill="#52525B"/>
+
+      <!-- Friso Negativo do Punho (Detalhe de Engenharia para leitura de escala) -->
+      <line id="Friso_Punho" x1="-40" y1="390" x2="40" y2="390" stroke="#09090B" stroke-width="10"/>
+    </g>
+
+    <!-- =================================================================
+         CAMADA C: CABEÇA DO MARTELO (EIXO ÓTICO ELEVADO EM Y = -130)
+         - Lado Esquerdo (Cego): Contido DENTRO da circunferência (X = -198,
+           enquanto a parede interna do anel está em X = -255). Possui pescoço
+           entalhado clássico para leitura imediata de "Martelo".
+         - Lado Direito (Afiado): Picareta que avança da cabeça e perfura a
+           abertura do anel com ponta em Vermelho Carmesim (#991B1B).
+         ================================================================= -->
+    <g id="Cabeca_Martelo">
+      <!-- 1. Peça Metálica Unificada da Cabeça (Garante Gestalt de Martelo antes da cor) -->
+      <polygon
+        id="Bloco_Forja_Principal"
+        points="
+          -182,-200
+          -92,-200
+          -66,-172
+          -46,-172
+          -42,-196
+          42,-196
+          46,-184
+          210,-168
+          165,-130
+          210,-92
+          46,-76
+          42,-64
+          -42,-64
+          -46,-88
+          -66,-88
+          -92,-60
+          -182,-60
+          -198,-78
+          -198,-182
+        "
+        fill="#52525B"
+      />
+
+      <!-- 2. Lâmina Perfurante (Razão / Vontade de Potência — #991B1B)
+           Encaixada geometricamente no chanfro em V da cabeça direita e
+           ultrapassando o raio externo do anel (354) até X = 435 -->
+      <polygon
+        id="Ponta_Picareta_Carmesim"
+        points="
+          182,-130
+          224,-166
+          435,-130
+          224,-94
+        "
+        fill="#991B1B"
+      />
+
+      <!-- 3. Cortes de Espaço Negativo (Gestalt / Separação Mecânica) -->
+      <!-- Separação entre Espiga Superior e Cabeça -->
+      <line id="Corte_Topo_Olhal" x1="-44" y1="-196" x2="44" y2="-196" stroke="#09090B" stroke-width="10"/>
+      <!-- Separação entre Base da Cabeça e Cabo -->
+      <line id="Corte_Base_Olhal" x1="-44" y1="-64" x2="44" y2="-64" stroke="#09090B" stroke-width="10"/>
+      <!-- Fenda Vertical de Impacto na Face Cega Esquerda -->
+      <line id="Friso_Face_Cega" x1="-176" y1="-202" x2="-176" y2="-58" stroke="#09090B" stroke-width="8"/>
+    </g>
+
+  </g>
+</svg>
+
